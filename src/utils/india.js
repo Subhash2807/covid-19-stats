@@ -18,7 +18,7 @@ var options = {
   url: 'https://covid-193.p.rapidapi.com/statistics',
   headers: {
     'x-rapidapi-host': 'covid-193.p.rapidapi.com',
-    'x-rapidapi-key': 'ebfc698951msh818ed6a9a1cddc6p1bb917jsn73549a09eb55',
+    'x-rapidapi-key': process.env.RAPID_KEY,
     useQueryString: true
   }
 };
