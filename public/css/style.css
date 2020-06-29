@@ -1,0 +1,204 @@
+
+@font-face{
+    font-family: bernard;
+    src:url('../fonts/BERNHC.TTF')
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../images/GroupL.png');
+    background-size: 100% 100vh;
+}
+@media only screen and (min-width:800px){
+header {
+    height:12vh;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color:#6b9c50;
+    min-height: 60px;
+}
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.left-nav{
+    height: 100%;
+    width:40%;
+    font-family: 'bernard','Piedra', cursive;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.left-nav h1{
+    font-size:2.2em;
+    letter-spacing: 1.5px;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+.left-nav h1:hover{
+    color:palegreen
+}
+.right-nav{
+    height: 100%;
+    width: 60%;
+    font-weight: 1000;
+    position: unset;
+}
+.right-nav ul {
+    list-style: none;
+    display: flex;
+    font-size: larger;
+    word-wrap: none;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-right: 10vw;
+    margin-top: 4.5vh;
+}
+.right-nav a{
+    text-decoration: none;
+    color:#6b9c50;
+}
+.right-nav li{
+    margin:0 1vw;
+    font-size:1.4rem;
+    opacity:0.9;
+    white-space: nowrap;
+}
+.right-nav li a:hover{
+    color:palegreen;
+}
+}
+.icon{
+    display: none;
+}
+.body{
+    height: 80vh;
+    width: 60%;
+    float:right;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    
+}
+.bottom{
+height: 5vh;
+width: 100%;
+margin-left:20%;
+margin-bottom:80px;
+
+}
+button{
+    height: 5vh;
+    min-height: 20px;
+    width:30%;
+    margin:0.3vw;
+    letter-spacing: 1.4px;
+}
+#stats button{
+    color:#6b9c50;
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+    border:3px solid #6b9c50;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'bernard';
+    
+}
+#about button{
+    background-color: #6b9c50;
+    border:none;
+    color:rgb(43, 131, 43);
+    font-weight: bold;
+    font-size: 2.5vh;
+    font-family: 'bernard';
+    white-space: nowrap;
+    
+}
+#stats button:hover,#about button:hover{
+    background-color: palegreen;
+    border:3px solid palegreen
+}
+@media only screen and (max-width:800px)
+{
+    .icon{
+        display: block;
+    }
+    a{
+        color:#6b9c50;
+    }
+    li a {
+        text-decoration: none;
+        color: #6b9c50;
+    }
+
+    .left-nav{
+        height: 10vh;
+        width: 100%;
+        background-color:rgba(255, 255, 255, 0.05);
+        color:#6b9c50;
+        font-family: bernard;
+        text-align: center;
+        font-size:1.5em ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        border-bottom:3px solid #6b9c50;
+        
+    }
+    .right-nav{
+        height: 192px;
+        width: 100%;
+        color:#6b9c50;
+        background-color: rgba(255, 255, 255, 1);
+        text-align: center;
+        display: none;
+       font-size: 2em;
+       border-bottom:3px solid #0d592b;
+       position: absolute;
+    }
+
+    .right-nav ul{
+        list-style: none;
+        width: 100%;
+    }
+    .right-nav ul li{
+        padding: 5px;
+        height: auto;
+        width:100%;
+        
+        
+    }
+    .right-nav ul li:hover{
+        background-color: rgb(43, 131, 43);
+    }
+
+}
+
+@media only screen and (max-width:600px)
+{
+    body{
+        background-image: url('../images/responsive.png');
+    }
+    .body{
+        float:unset;
+        justify-content: center;
+        margin: auto auto;
+    }
+    .bottom{
+        height: 5vh;
+        width: 100%;
+        padding-left:10px;
+        margin-bottom:80px;
+        
+        }
+        button{
+            width:70px;
+        }
+}

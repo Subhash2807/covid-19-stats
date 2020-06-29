@@ -1,0 +1,45 @@
+    <%- include('partials/header') -%> 
+    <div class="body">
+        <div class="cases">
+            <div class="world">
+               <a href="/stats"> <h2>Cases in world</h2></a>
+            </div>
+            <div class="null">
+                <div class="search">
+                <input  type="text" id="country" placeholder="Search...">
+                <img  src="./icons/search.svg">
+                </div>
+            </div>
+            <div class="india">
+               <a href="/india"> <h2>cases in india</h2></a>
+            </div>
+        </div>
+        <div class="corona-heading">
+            <h1 class="corona-heading-1">Coronavirus cases in <%= name %> </h1>
+            <a onclick="dynamic()" id="dynamic" href="javascript:void(0)"><h3>view other countries</h3></a>
+        </div>
+        <div class="grid">
+            <div class="box">
+                <h2>Total cases</h2>
+                <h1 id="totalcases" style="color:grey"><%= body.TotalConfirmed %> </h1>
+                <h2>Total Deaths</h2>
+                <h1 id="totaldeaths"style="color:red"><%= body.TotalDeaths %> </h1>
+            </div>
+            <div class="box">
+                <h2>New Cases</h2>
+                <h1 id="newcases" style="color:grey"> <%= body.NewConfirmed %> </h1>
+                <h2>New Deaths</h2>
+                <h1 id="newdeaths" style="color:red"><%= body.NewDeaths %> </h1>
+            </div>
+            <div class="box ">
+                <h2>Active Cases</h2>
+                <h1 id="activecases" style="color:grey"><%= body.TotalConfirmed - body.TotalRecovered %> </h1>
+                <h2>Total Recovered</h2>
+                <h1 id="totalrecovered" style="color:rgb(59, 149, 59)"><%= body.TotalRecovered %> </h1>
+            </div>
+        </div>
+    </div>
+    <datalist id="country">
+        <option value="india">india</option>
+    </datalist>
+    <%- include('partials/footer.ejs') -%>
