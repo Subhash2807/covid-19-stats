@@ -3,7 +3,7 @@ const path = require('path')
 const request = require('request');
 const ejs = require('ejs');
 const {country} = require('./utils/country');
-require('dotenv').config();
+
 
 // const india = require('./module/india')
 const {world,india} = require('./utils/world')
